@@ -10,7 +10,7 @@ without opening a terminal.
 
 Made by **Modern Byte**. Licensed under the MIT License (see [LICENSE](LICENSE)).
 
-![Preview](thumbnail.webp)
+![Preview](assets/hero.jpg)
 
 ---
 
@@ -152,6 +152,11 @@ noctalia msg plugin ModernByte/cloudflare-warp:service all refresh
 
 If WARP is missing or the service is down, the plugin stays alive and shows a
 warning — it never crashes or hides itself.
+
+## Documentation
+
+The [wiki/](wiki/Home.md) folder holds the full documentation in English and
+Russian: installation walkthrough, architecture, IPC reference and troubleshooting.
 
 ## Known limitations
 
