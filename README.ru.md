@@ -157,8 +157,8 @@ noctalia msg plugin ModernByte/cloudflare-warp:service all refresh
 
 ## Документация
 
-В папке [wiki/](wiki/Home.ru.md) — полная документация на русском и английском:
-установка, архитектура, IPC-справочник и устранение проблем.
+В [вики](https://github.com/ModernByte/cloudflare-warp/wiki) — полная документация
+на русском и английском: установка, архитектура, IPC-справочник и устранение проблем.
 
 ## Известные ограничения
 

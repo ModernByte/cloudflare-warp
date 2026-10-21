@@ -155,8 +155,9 @@ warning — it never crashes or hides itself.
 
 ## Documentation
 
-The [wiki/](wiki/Home.md) folder holds the full documentation in English and
-Russian: installation walkthrough, architecture, IPC reference and troubleshooting.
+The [wiki](https://github.com/ModernByte/cloudflare-warp/wiki) holds the full
+documentation in English and Russian: installation walkthrough, architecture,
+IPC reference and troubleshooting.
 
 ## Known limitations
 
