@@ -1,0 +1,160 @@
+{
+  "title": "Cloudflare WARP",
+  "settings": {
+    "poll_interval": {
+      "label": "Интервал опроса",
+      "description": "Как часто запрашивать статус у warp-cli, в миллисекундах."
+    },
+    "notify_on_change": {
+      "label": "Уведомлять об изменении подключения"
+    },
+    "notify_on_error": {
+      "label": "Уведомлять об ошибках"
+    },
+    "auto_trace": {
+      "label": "Определять сетевую идентичность",
+      "description": "Периодически получать внешний IP, страну и edge Cloudflare из cdn-cgi/trace."
+    },
+    "trace_interval": {
+      "label": "Интервал трассировки (секунды)",
+      "description": "Как часто обновлять сетевую идентичность, пока отслеживание включено."
+    },
+    "show_text_in_bar": {
+      "label": "Показывать текст в баре"
+    },
+    "compact_mode": {
+      "label": "Компактный режим (только иконка)"
+    }
+  },
+  "notify": {
+    "connected": {
+      "title": "WARP подключён",
+      "body": "Cloudflare WARP теперь подключён."
+    },
+    "disconnected": {
+      "title": "WARP отключён",
+      "body": "Cloudflare WARP теперь отключён."
+    },
+    "error": {
+      "title": "Ошибка WARP"
+    }
+  },
+  "error": {
+    "cli-missing": "warp-cli не найден в PATH. Установите пакет cloudflare-warp и проверьте, что warp-cli доступен в PATH.",
+    "daemon-down": "Демон WARP недоступен. Запустите службу warp-svc, затем нажмите «Обновить».",
+    "unregistered": "Клиент WARP не зарегистрирован. Нажмите «Зарегистрировать» и завершите вход в браузере.",
+    "command-failed": "Команда warp-cli завершилась с ошибкой. Нажмите «Обновить»; если ошибка повторяется, выполните warp-cli в терминале.",
+    "timeout": "Команда warp-cli превысила таймаут. Убедитесь, что демон WARP запущен, затем нажмите «Обновить».",
+    "decode-failed": "Не удалось разобрать вывод warp-cli. Обновите cloudflare-warp до поддерживаемой версии, затем нажмите «Обновить».",
+    "mode-locked": "Режим заблокирован политикой. Им управляет ваша организация; измените его в панели Cloudflare Zero Trust.",
+    "register-pending": "Регистрация ждёт завершения входа в браузере. Завершите вход в браузере, затем нажмите «Обновить»."
+  },
+  "status": {
+    "unavailable": "Недоступен",
+    "unregistered": "Не зарегистрирован",
+    "disconnected": "Отключён",
+    "connecting": "Подключение...",
+    "connected": "Подключён",
+    "disconnecting": "Отключение...",
+    "error": "Ошибка",
+    "unknown": "Неизвестно"
+  },
+  "widget": {
+    "text": {
+      "on": "Вкл",
+      "off": "Выкл",
+      "connecting": "…",
+      "register": "Регистрация",
+      "error": "Ошибка",
+      "unknown": "Неизвестно"
+    },
+    "tooltip": {
+      "status": "Статус",
+      "mode": "Режим",
+      "families": "DNS-фильтрация",
+      "protocol": "Протокол",
+      "ip": "IP",
+      "location": "Локация",
+      "updated": "Обновлено",
+      "error": "Ошибка"
+    }
+  },
+  "shortcut": {
+    "on": "WARP включён",
+    "off": "WARP выключен",
+    "connecting": "WARP: подключение...",
+    "register": "WARP: регистрация",
+    "error": "WARP: ошибка",
+    "unknown": "WARP: неизвестно"
+  },
+  "panel": {
+    "title": "Cloudflare WARP",
+    "updated": "Обновлено",
+    "section": {
+      "mode": "Режим",
+      "families": "DNS-фильтрация",
+      "protocol": "Протокол",
+      "identity": "Сетевая идентичность"
+    },
+    "mode": {
+      "unknown": "Неизвестно",
+      "locked": "Режим заблокирован политикой"
+    },
+    "protocol": {
+      "unknown": "Неизвестно"
+    },
+    "hero": {
+      "subtitle": {
+        "connected": "Трафик защищён",
+        "disconnected": "Трафик идёт напрямую",
+        "connecting": "Защищаем трафик…",
+        "disconnecting": "Снимаем защиту…",
+        "unregistered": "Клиент не зарегистрирован",
+        "error": "Команда завершилась ошибкой",
+        "unavailable": "warp-cli не найден в PATH",
+        "unknown": "Состояние неизвестно"
+      }
+    },
+    "action": {
+      "copy_ip": "Скопировать IP",
+      "copied": "Скопировано",
+      "register": "Зарегистрировать",
+      "settings": "Настройки",
+      "refresh": "Обновить",
+      "close": "Закрыть",
+      "connect": "Подключить WARP",
+      "disconnect": "Отключить WARP"
+    },
+    "trace": {
+      "none": "неизвестно",
+      "never": "не выполнялась",
+      "warp": {
+        "on": "WARP включён",
+        "plus": "WARP+",
+        "off": "WARP выключен",
+        "unknown": "неизвестно"
+      }
+    },
+    "identity": {
+      "ip": "IP",
+      "loc": "Локация",
+      "colo": "Edge",
+      "warp": "WARP",
+      "time": "Трассировка"
+    }
+  },
+  "mode": {
+    "warp": "WARP",
+    "doh": "DNS over HTTPS",
+    "warp+doh": "WARP + DNS over HTTPS",
+    "dot": "DNS over TLS",
+    "warp+dot": "WARP + DNS over TLS",
+    "proxy": "Прокси",
+    "tunnel_only": "Только туннель"
+  },
+  "families": {
+    "off": "Выкл",
+    "malware": "Вредоносные",
+    "full": "Все угрозы"
+  }
+}

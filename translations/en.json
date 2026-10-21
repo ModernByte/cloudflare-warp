@@ -1,0 +1,160 @@
+{
+  "title": "Cloudflare WARP",
+  "settings": {
+    "poll_interval": {
+      "label": "Poll interval",
+      "description": "How often to query warp-cli for status, in milliseconds."
+    },
+    "notify_on_change": {
+      "label": "Notify when the connection changes"
+    },
+    "notify_on_error": {
+      "label": "Notify on errors"
+    },
+    "auto_trace": {
+      "label": "Track network identity",
+      "description": "Periodically fetch the egress IP, location and Cloudflare edge from cdn-cgi/trace."
+    },
+    "trace_interval": {
+      "label": "Trace interval (seconds)",
+      "description": "How often to refresh network identity while tracking is enabled."
+    },
+    "show_text_in_bar": {
+      "label": "Show text in the bar"
+    },
+    "compact_mode": {
+      "label": "Compact mode (icon only)"
+    }
+  },
+  "notify": {
+    "connected": {
+      "title": "WARP connected",
+      "body": "Cloudflare WARP is now connected."
+    },
+    "disconnected": {
+      "title": "WARP disconnected",
+      "body": "Cloudflare WARP is now disconnected."
+    },
+    "error": {
+      "title": "WARP error"
+    }
+  },
+  "error": {
+    "cli-missing": "warp-cli not found in PATH. Install the cloudflare-warp package and make sure warp-cli is in PATH.",
+    "daemon-down": "The WARP daemon is not reachable. Start the warp-svc service and press Refresh.",
+    "unregistered": "The WARP client is not registered. Press Register and complete the sign-in in your browser.",
+    "command-failed": "The warp-cli command failed. Press Refresh; run warp-cli in a terminal if it keeps failing.",
+    "timeout": "The warp-cli command timed out. Make sure the WARP daemon is running, then press Refresh.",
+    "decode-failed": "Could not parse the warp-cli output. Update cloudflare-warp to a supported version, then press Refresh.",
+    "mode-locked": "Mode is locked by a policy. Your organization controls the operation mode; change it in the Cloudflare Zero Trust dashboard.",
+    "register-pending": "Registration is waiting for the browser sign-in to finish. Complete the sign-in in your browser, then press Refresh."
+  },
+  "status": {
+    "unavailable": "Unavailable",
+    "unregistered": "Not registered",
+    "disconnected": "Disconnected",
+    "connecting": "Connecting...",
+    "connected": "Connected",
+    "disconnecting": "Disconnecting...",
+    "error": "Error",
+    "unknown": "Unknown"
+  },
+  "widget": {
+    "text": {
+      "on": "On",
+      "off": "Off",
+      "connecting": "…",
+      "register": "Register",
+      "error": "Error",
+      "unknown": "Unknown"
+    },
+    "tooltip": {
+      "status": "Status",
+      "mode": "Mode",
+      "families": "Families",
+      "protocol": "Protocol",
+      "ip": "IP",
+      "location": "Location",
+      "updated": "Updated",
+      "error": "Error"
+    }
+  },
+  "shortcut": {
+    "on": "WARP On",
+    "off": "WARP Off",
+    "connecting": "WARP Connecting...",
+    "register": "WARP Register",
+    "error": "WARP Error",
+    "unknown": "WARP Unknown"
+  },
+  "panel": {
+    "title": "Cloudflare WARP",
+    "updated": "Updated",
+    "section": {
+      "mode": "Mode",
+      "families": "DNS filtering",
+      "protocol": "Protocol",
+      "identity": "Network identity"
+    },
+    "mode": {
+      "unknown": "Unknown",
+      "locked": "Mode is locked by a policy"
+    },
+    "protocol": {
+      "unknown": "Unknown"
+    },
+    "hero": {
+      "subtitle": {
+        "connected": "Traffic is protected",
+        "disconnected": "Traffic is not protected",
+        "connecting": "Protecting traffic…",
+        "disconnecting": "Removing protection…",
+        "unregistered": "Client is not registered",
+        "error": "The last command failed",
+        "unavailable": "warp-cli is not in PATH",
+        "unknown": "State is unknown"
+      }
+    },
+    "action": {
+      "copy_ip": "Copy IP",
+      "copied": "Copied",
+      "register": "Register",
+      "settings": "Settings",
+      "refresh": "Refresh",
+      "close": "Close",
+      "connect": "Connect WARP",
+      "disconnect": "Disconnect WARP"
+    },
+    "trace": {
+      "none": "Unknown",
+      "never": "Not run yet",
+      "warp": {
+        "on": "WARP on",
+        "plus": "WARP+",
+        "off": "WARP off",
+        "unknown": "Unknown"
+      }
+    },
+    "identity": {
+      "ip": "IP",
+      "loc": "Location",
+      "colo": "Edge",
+      "warp": "WARP",
+      "time": "Traced"
+    }
+  },
+  "mode": {
+    "warp": "WARP",
+    "doh": "DNS over HTTPS",
+    "warp+doh": "WARP + DNS over HTTPS",
+    "dot": "DNS over TLS",
+    "warp+dot": "WARP + DNS over TLS",
+    "proxy": "Proxy",
+    "tunnel_only": "Tunnel only"
+  },
+  "families": {
+    "off": "Off",
+    "malware": "Malware",
+    "full": "Full"
+  }
+}

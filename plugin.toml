@@ -1,0 +1,84 @@
+id           = "ModernByte/cloudflare-warp"
+name         = "Cloudflare WARP"
+version      = "1.0.0"
+plugin_api   = 24
+author       = "Modern Byte"
+license      = "MIT"
+icon         = "cloud-lock"
+description  = "Control Cloudflare WARP from the bar, Control Center and a dedicated panel."
+tags         = ["network", "vpn", "privacy", "cloudflare"]
+dependencies = ["cloudflare-warp"]
+
+[[setting]]
+key             = "poll_interval_ms"
+type            = "int"
+label_key       = "settings.poll_interval.label"
+description_key = "settings.poll_interval.description"
+default         = 3000
+min             = 1000
+max             = 60000
+
+[[setting]]
+key         = "notify_on_change"
+type        = "bool"
+label_key   = "settings.notify_on_change.label"
+default     = true
+
+[[setting]]
+key         = "notify_on_error"
+type        = "bool"
+label_key   = "settings.notify_on_error.label"
+default     = true
+
+[[setting]]
+key             = "auto_trace"
+type            = "bool"
+label_key       = "settings.auto_trace.label"
+description_key = "settings.auto_trace.description"
+default         = true
+
+[[setting]]
+key             = "trace_interval_s"
+type            = "int"
+label_key       = "settings.trace_interval.label"
+description_key = "settings.trace_interval.description"
+default         = 60
+min             = 15
+max             = 3600
+visible_when    = { key = "auto_trace", values = ["true"] }
+
+[[service]]
+id    = "service"
+entry = "service.luau"
+
+[[widget]]
+id    = "widget"
+entry = "widget.luau"
+
+[widget.actions]
+right = "none"
+
+[[widget.setting]]
+key       = "show_text_in_bar"
+type      = "bool"
+label_key = "settings.show_text_in_bar.label"
+default   = true
+
+[[widget.setting]]
+key       = "compact_mode"
+type      = "bool"
+label_key = "settings.compact_mode.label"
+default   = false
+
+[[shortcut]]
+id    = "shortcut"
+entry = "shortcut.luau"
+
+[[panel]]
+id             = "panel"
+entry          = "panel.luau"
+width          = 400
+height         = 734
+placement      = "floating"
+position       = "auto"
+open_near_click = true

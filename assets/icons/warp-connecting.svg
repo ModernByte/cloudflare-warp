@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="connecting WARP status">
+  <!-- cloud: active orange -->
+  <path d="M7.1 15.3H6.4a3.9 3.9 0 1 1 .7-7.74A5.35 5.35 0 0 1 17.5 8.7h.35a3.3 3.3 0 0 1 .05 6.6h-.75"
+        stroke="#F6821F" stroke-width="1.7"/>
+  <!-- shield amber -->
+  <path d="M12 10.05 16 11.5v3.45c0 2.45-1.6 4.55-4 5.95-2.4-1.4-4-3.5-4-5.95V11.5l4-1.45Z"
+        stroke="#F59E0B" stroke-width="1.7"/>
+  <!-- progress: arc + dot -->
+  <path d="M9.5 8.2a3.55 3.55 0 0 1 5 0" stroke="#F59E0B" stroke-width="1.7"/>
+  <path d="M12 12.1v2.25" stroke="#F59E0B" stroke-width="1.7"/>
+  <circle cx="12" cy="16.2" r=".45" fill="#F59E0B" stroke="none"/>
+</svg>

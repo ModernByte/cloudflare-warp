@@ -1,0 +1,3 @@
+# Noctalia plugin — nothing to build, only runtime leftovers
+*.luau.cache/
+.DS_Store
